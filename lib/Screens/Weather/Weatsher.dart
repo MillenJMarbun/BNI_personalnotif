@@ -1,0 +1,103 @@
+import 'package:flutter/material.dart';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:bnipersonalnotif/Screens/Weather/widgets/main_widget.dart';
+import 'widgets/weather_tile.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+
+Future<WeatherInfo> fetchWeather() async {
+  final zipCode = "Jakarta";
+  final apiKey = "d6d6e8e485b041d5207d826fa398a9d4";
+  final requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=${zipCode}&units=metric&appid=${apiKey}";
+  /*"https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&units=metric&appid=${apiKey}";*/
+
+  final response = await http.get(Uri.parse(requestUrl));
+
+  if (response.statusCode == 200) {
+    return WeatherInfo.fromJson(jsonDecode(response.body));
+  }  else{
+    throw Exception('error loading request URL info.');
+  }
+}
+
+
+class WeatherInfo{
+  final location;
+  final temp;
+  final tempMin;
+  final tempMax;
+  final weather;
+  final humidity;
+  final windSpeed;
+
+  WeatherInfo({
+    @required this.location,
+    @required this.temp,
+    @required this.tempMin,
+    @required this.tempMax,
+    @required this.weather,
+    @required this.humidity,
+    @required this.windSpeed,
+
+  });
+
+  factory WeatherInfo.fromJson(Map<String, dynamic> json){
+    return WeatherInfo(
+        location: json['name'],
+        temp: json['main']['temp'],
+        tempMin: json['main']['temp_min'],
+        tempMax: json['main']['temp_max'],
+        weather: json['weather'][0]['description'],
+        humidity: json['main']['humidity'],
+        windSpeed: json['wind']['speed'],
+
+    );
+  }
+}
+
+
+class Weather extends StatefulWidget {
+  @override
+  _WeatherState createState() => _WeatherState();
+}
+
+class _WeatherState extends State<Weather> {
+
+  Future<WeatherInfo> futureWeather;
+  @override
+  void initState(){
+    super.initState();
+    futureWeather = fetchWeather();
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: FutureBuilder<WeatherInfo>(
+            future: futureWeather,
+            builder: (context, snapshot){
+              if(snapshot.hasData){
+                return MainWidget(
+                  location: snapshot.data.location,
+                  temp: snapshot.data.temp,
+                  tempMin: snapshot.data.tempMin,
+                  tempMax: snapshot.data.tempMax,
+                  weather: snapshot.data.weather,
+                  humidity: snapshot.data.humidity,
+                  windSpeed: snapshot.data.windSpeed,
+                );
+              }else if (snapshot.hasError){
+                return Center(
+                  child: Text("${snapshot.error}"),
+                );
+              }
+              return CircularProgressIndicator();
+            }
+        )
+    );
+  }
+}
