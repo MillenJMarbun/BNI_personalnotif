@@ -90,7 +90,7 @@ class _p1ReadddState extends State<p1Readdd> {
         ],
       ),
       body: WebView(
-        initialUrl: 'https://drive.idcloudhost.com/s/3PjPTjbpLwL8ecb#pdfviewer',
+        initialUrl: 'https://www.youtube.com/c/BNICorporateUniversity?&ab_',
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );

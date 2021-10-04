@@ -21,9 +21,9 @@ class _blwHomeState extends State<blwHome> {
   var _icon = Icons.remove_red_eye_outlined;
 
   var link1 =
-      'https://drive.google.com/file/d/1aofegz2hqK3WMaq-saI1TnIkwbVIOaBm/view?usp=sharing';
+      'https://www.youtube.com/watch?v=EKNZlrAemSE&ab_';
   var link2 =
-      'https://drive.google.com/file/d/1jaz4RHyhPBbv-jRtf1nMfzBu7wE8QESe/view?usp=sharing';
+      'https://www.youtube.com/watch?v=EKNZlrAemSE&ab_';
 
   @override
   Widget build(BuildContext context) {

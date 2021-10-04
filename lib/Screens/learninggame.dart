@@ -26,7 +26,7 @@ class _LearningGameState extends State<LearningGame> {
         ),
       ),
       body: const WebView(
-        initialUrl: 'https://www.bnicorpu.co.id/smarter/',
+        initialUrl: 'https://game-bnilr.agatedev.net/',
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );

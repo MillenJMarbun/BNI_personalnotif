@@ -18,7 +18,7 @@ List<elearning6> recentList6 = [
 
   elearning6(
     title: 'AKHLAK Series: BNI Hi Movers Tolak Gratifikasi & S...',
-    link: 'https://youtu.be/XE2Kt4AsUCQ',
+    link: 'https://www.youtube.com/watch?v=EKNZlrAemSE&ab_',
     rating: '4.8 \u2605 dari 3461 orang',
     date: '13/01/2021',
     type: 'VIDEO',
@@ -26,7 +26,7 @@ List<elearning6> recentList6 = [
 
   elearning6(
     title: 'AKHLAK Series: BNI Hi Movers Tolak Gratifikasi & S...',
-    link: 'https://www.bnicorpu.co.id/smarter/digital-pembelajaran/learning/3674',
+    link: 'https://www.youtube.com/watch?v=EKNZlrAemSE&ab_',
     rating: '4.8 \u2605 dari 2000 orang',
     date: '13/01/2021',
     type: 'TEST',

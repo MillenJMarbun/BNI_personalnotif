@@ -77,7 +77,6 @@ class Body extends StatelessWidget {
                 iconSize: 33.0,
                 onPressed: () async {
                   final isAuthenticated = await LocalAuthApi.authenticate();
-
                   if (isAuthenticated) {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(builder: (context) => MainScreen()),

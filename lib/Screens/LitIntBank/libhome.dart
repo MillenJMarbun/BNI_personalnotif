@@ -137,7 +137,7 @@ class _libHomeState extends State<libHome> {
                             MaterialPageRoute(
                                 builder: (context) => libWeb(
                                     link:
-                                        "https://drive.idcloudhost.com/s/5ZxRnnfDk8S7aF7")));
+                                        "https://www.youtube.com/watch?v=EKNZlrAemSE&ab_")));
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -391,7 +391,7 @@ class _libHomeState extends State<libHome> {
                             MaterialPageRoute(
                                 builder: (context) => libWeb(
                                     link:
-                                        "https://drive.idcloudhost.com/s/szbMzse44qCWBRt")));
+                                        "https://www.youtube.com/watch?v=EKNZlrAemSE&ab_")));
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -647,7 +647,7 @@ class _libHomeState extends State<libHome> {
                             MaterialPageRoute(
                                 builder: (context) => libWeb(
                                     link:
-                                        "	https://drive.idcloudhost.com/s/JdNmnNq9gcEW8Wi")));
+                                        "https://www.youtube.com/watch?v=EKNZlrAemSE&ab_")));
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -900,7 +900,7 @@ class _libHomeState extends State<libHome> {
                             MaterialPageRoute(
                                 builder: (context) => libWeb(
                                     link:
-                                        "https://drive.idcloudhost.com/s/MaqENgRckAKEKSE")));
+                                        "https://www.youtube.com/watch?v=EKNZlrAemSE&ab_")));
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -1088,10 +1088,10 @@ class _libHomeState extends State<libHome> {
                                                                   ),
                                                                 );
                                                               }
-
                                                               else {
                                                                 setState(() {
                                                                   box4 = Colors.green;
+                                                                  bool4 = 2;
                                                                 });
                                                                 Navigator.pop(
                                                                     context);
@@ -1211,7 +1211,7 @@ class _libHomeState extends State<libHome> {
                             MaterialPageRoute(
                                 builder: (context) => libWeb(
                                     link:
-                                        "https://drive.idcloudhost.com/s/989zzTdC6EnZp2W")));
+                                        "https://www.youtube.com/watch?v=EKNZlrAemSE&ab_")));
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -1401,6 +1401,7 @@ class _libHomeState extends State<libHome> {
                                                               else {
                                                                 setState(() {
                                                                   box5 = Colors.green;
+                                                                  bool5 = 2;
                                                                 });
                                                                 Navigator.pop(
                                                                     context);
@@ -1519,7 +1520,7 @@ class _libHomeState extends State<libHome> {
                             MaterialPageRoute(
                                 builder: (context) => libWeb(
                                     link:
-                                        "	https://drive.idcloudhost.com/s/qBSW579HZB5Cxw2")));
+                                        "https://www.youtube.com/watch?v=EKNZlrAemSE&ab_")));
                       },
                       child: Container(
                         decoration: BoxDecoration(
